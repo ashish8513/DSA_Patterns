@@ -33,7 +33,7 @@ public:
         vector<int> ans(seq.size(), 0);
         for(int i = 0; i < seq.size(); i++){
             if(seq[i] == '('){
-                //here the condition is Adepth <= Bdepth
+                
                 if(Adepth <= Bdepth){
                     Adepth++;
                     ans[i] = 0;
@@ -42,8 +42,6 @@ public:
                     ans[i] = 1;
                 }
             }else{
-                //here the condition is Adepth > Bdepth
-                //(the opposite of Adepth <= Bdepth)
                 if(Adepth > Bdepth){
                     Adepth--;
                     ans[i] = 0;
